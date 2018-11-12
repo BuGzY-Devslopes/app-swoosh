@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,10 +85,10 @@ the league</string>
             </objects>
             <point key="canvasLocation" x="724" y="148.87556221889056"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="HnE-vM-JP1">
             <objects>
-                <viewController id="rYh-jb-N9L" sceneMemberID="viewController">
+                <viewController id="rYh-jb-N9L" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uFs-sj-fTg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,6 +159,9 @@ the league</string>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonActon:" destination="rYh-jb-N9L" eventType="touchUpInside" id="xIV-eR-9NA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-lc-pl8">
                                 <rect key="frame" x="20" y="20" width="50" height="50"/>
@@ -187,16 +190,19 @@ the league</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V6h-eu-RKU"/>
                     </view>
+                    <connections>
+                        <segue destination="XCD-YY-mch" kind="show" identifier="toSkillVC" id="Jj4-BX-kbH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pre-vV-VFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="RPJ-fU-9Eb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1388" y="148"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="9Wf-AP-Ceu">
             <objects>
-                <viewController id="XCD-YY-mch" sceneMemberID="viewController">
+                <viewController id="XCD-YY-mch" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lRC-w4-knl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,13 +211,13 @@ the league</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="SqJ-WI-awW">
-                                <rect key="frame" x="140.66666666666666" y="40.000000000000007" width="132.99999999999997" height="79.666666666666686"/>
+                                <rect key="frame" x="147.66666666666666" y="40.000000000000007" width="118.99999999999997" height="79.666666666666686"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VJB-vJ-qvr">
-                                        <rect key="frame" x="0.0" y="0.0" width="133" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="20"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desired League:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-0S-oxX">
-                                        <rect key="frame" x="0.0" y="54.999999999999993" width="133" height="24.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm a:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-0S-oxX">
+                                        <rect key="frame" x="0.0" y="54.999999999999993" width="119" height="24.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
